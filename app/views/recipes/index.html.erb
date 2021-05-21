@@ -13,10 +13,31 @@
               <div class="content">
                 <p>レシピ元：<%= recipe.maker %></p>
               </div>
+              <div class="content average-score">
+                <div class="star-rating mb-2">
+                  <div class="star-rating-front" style="width: <%= recipe.review_score_percentage %>%">
+                    ★★★★★
+                  </div>
+                  <div class="star-rating-back">
+                    ★★★★★
+                  </div>
+                </div>
+                <div class="average-score-display ml-3 pt-2">
+                  <%= recipe.avg_score %>点(<%= recipe.reviews.count %>件のレビュー)
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <%= link_to recipe_reviews_path(recipe), class: "button card-footer-item" do %>
+                レビューを見る
+              <% end %>
+              <%= link_to recipe_path(recipe), class: "button card-footer-item" do %>
+                レビューを書く
+              <% end %>
             </div>
           </div>
         <% end %>
       </div>
     </div>
   </div>
-</div>
+</section>
