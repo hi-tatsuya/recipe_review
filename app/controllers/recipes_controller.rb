@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!,only: [:show]
+  
   def index
     @recipes = Recipe.all
   end
@@ -7,8 +9,4 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @review = Review.new
   end
-
-  # private
-  # def
-  # end
 end

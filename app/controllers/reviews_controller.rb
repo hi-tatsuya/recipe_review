@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!,only: [:create]
+
   def index
     @recipe = Recipe.find(params[:recipe_id])
     @reviews = @recipe.reviews
