@@ -1,0 +1,22 @@
+<section class="section mt-6">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-5">
+        <% @recipes.each do |recipe| %>
+          <div class="card mb-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <%= recipe.name %>
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <p>レシピ元：<%= recipe.maker %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
