@@ -10,7 +10,7 @@
         <span class="fa fa-star-o" id="star"></span>
       </div>
       <div class="ml-3 rating-value-display" style="color: white" >
-        <span id="rating-value-display">/5</span>
+        <span id="rating-value-display"></span>/5
       </div>
     </div>
     <%= f.hidden_field :recipe_id, value: recipe.id %>
@@ -20,3 +20,5 @@
     <%= link_to "他のレビュー", recipe_reviews_path(recipe), class:"button light ml-3 mt-3" %>
   <% end %>
 </div>
+
+<%= javascript_include_tag "reviews.js" %>
