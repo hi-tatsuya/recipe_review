@@ -12,10 +12,50 @@
   </head>
 
   <body>
-    <div class="flash">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <% if flash[:notice] %>
+      <div class="notification is-info">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="notification is-danger">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    <header class="navbar">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <strong class="is-size-3" style="font-family: Gill Sans, sans-serif;">recipe_review</strong>
+        <% end %>
+      </div>
+      <div class="navbar-start">
+        <%= link_to root_path, class: "navbar-item" do %>
+          レシピ一覧
+        <% end %>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <% if user_signed_in? %>
+            <p class="navbar-item">ようこそ <%= current_user.username %> さん</p>
+          <% end %>
+        </div>
+        <div class="buttons">
+          <% if user_signed_in? %>
+            <%= link_to destroy_user_session_path, method: :delete, class: "button" do %>
+              ログアウト
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path, class: "button" do %>
+              ログイン
+            <% end %>
+            <%= link_to new_user_registration_path, class: "button" do %>
+              新規登録
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
