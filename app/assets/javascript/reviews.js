@@ -16,8 +16,8 @@ for(let i=0; i<stars.length; i++){
     }
   })
   stars[i].addEventListener("click",function(){
-    ratingValueDisplay.value = i+1;
-    ratingValueDisplay.textContent = ratingValueDisplay.value;
+    ratingValue.value = i+1;
+    ratingValueDisplay.textContent = ratingValue.value;
     index = i;
   })
   stars[i].addEventListener("mouseout",function(){

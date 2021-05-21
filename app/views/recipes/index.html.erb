@@ -14,6 +14,14 @@
                 <p>レシピ元：<%= recipe.maker %></p>
               </div>
             </div>
+            <div class="card-footer">
+              <%= link_to recipe_reviews_path(recipe), class: "button card-footer-item" do %>
+                レビューを見る
+              <% end %>
+              <%= link_to recipe_path(recipe), class: "button card-footer-item" do %>
+                レビューを書く
+              <% end %>
+            </div>
           </div>
         <% end %>
       </div>
