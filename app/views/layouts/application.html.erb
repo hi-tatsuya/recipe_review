@@ -33,6 +33,11 @@
           レシピ一覧
         <% end %>
       </div>
+      <div class="navbar-start">
+        <%= link_to new_recipe_path, class: "navbar-item" do %>
+          レシピを新規投稿する
+        <% end %>
+      </div>
       <div class="navbar-end">
         <div class="navbar-item">
           <% if user_signed_in? %>
