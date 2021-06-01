@@ -19,6 +19,15 @@ class RecipesController < ApplicationController
     @review = Review.new
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    recipe = Recipe.find(params[:id])
+    recipe.update(recipe_params)
+  end
+
   def recipe_params
     params.require(:recipe).permit(:name,:maker,:recipe_img)
   end
