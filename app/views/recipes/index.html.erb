@@ -13,6 +13,11 @@
               <div class="content">
                 <p>レシピ元：<%= recipe.maker %></p>
               </div>
+              <div class="content">
+                <% if recipe.recipe_img? %>
+                  <p><%= image_tag recipe.recipe_img.url %></p>
+                <% end %>
+              </div>
               <div class="content average-score">
                 <div class="star-rating mb-2">
                   <div class="star-rating-front" style="width: <%= recipe.review_score_percentage %>%">

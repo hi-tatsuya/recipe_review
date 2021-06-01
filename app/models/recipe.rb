@@ -1,4 +1,5 @@
 class Recipe < ApplicationRecord
+  mount_uploader :recipe_img, ImageUploader
   has_many :reviews, dependent: :destroy
   def avg_score
     unless self.reviews.empty?
