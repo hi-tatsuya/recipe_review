@@ -12,6 +12,10 @@
             <%= f.label :maker, "レシピ元" %>
             <%= f.text_field :maker, class: "input" %>
           </div>
+          <div class="field">
+            <%= f.label :recipe_img, "レシピ画像" %>
+            <%= f.file_field :recipe_img %>
+          </div>
           <div class="actions">
             <%= f.submit "投稿する", class: "button mt-3 is-success"  %>
           </div>
