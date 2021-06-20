@@ -7,5 +7,7 @@ if Rails.env.production?
       region: "ap-northeast-1"
     }
     config.fog_directory = "recipe-review-bk"
+    config.asset_host = "static.recipe-review.com"
+
   end
 end
