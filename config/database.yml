@@ -82,5 +82,6 @@ test:
 production:
   <<: *default
   database: recipe_review_production
-  username: recipe_review
-  password: <%= ENV['RECIPE_REVIEW_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
