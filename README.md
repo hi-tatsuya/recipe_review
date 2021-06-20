@@ -1,24 +1,31 @@
-# README
+アプリケーション名
+「レシピレビュー」
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+アプリケーション概要
+さまざまな料理研究家や雑誌、本のレシピを実際に作って食べた人のクチコミ、評価が見れるアプリです。
 
-Things you may want to cover:
+使用技術
+ruby 2.7.2
+rails 6.1.3.2
+PostgreSQL 13.2
+AWS
 
-* Ruby version
 
-* System dependencies
+テスト用アカウント
+メールアドレス： tatsuya@test
+パスワード : password
 
-* Configuration
+利用方法
+実際に自分が作ったレシピのクチコミ投稿。評価（５段階）。
+作ってみたいけど本当に美味しいか心配な時に、他の人のクチコミを見る。
 
-* Database creation
+目指した課題解決
+せっかく大変な思いをして料理をするのだから、絶対に美味しいものが食べたい。こんなものかとがっかりしたくない。
+そんな時にこのアプリを使って評価の高いレシピを参考に作ることで、満足できる料理がつくれる。
 
-* Database initialization
+レシピがネット上に溢れているのでどれを参考にするか考えるだけで疲れてしまう。
+そんなときはこのアプリで評価の高いものをさんこうにすれば間違いない。
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+誰でもレシピを発信できる時代。
+本当にいいレシピを投稿している人を、レビューという形で正当に評価したい。
+またそうすることで全体のレベルの底上げになり、たくさんの人がおいしく手軽に料理を楽しめる。
